@@ -1,14 +1,15 @@
+
 import java.util.Scanner;
 
 // Example 1: Declare and initialize 2D array
 class Array2DBasic {
     public static void main(String[] args) {
         int[][] matrix = {
-            {1, 2, 3},
-            {4, 5, 6},
-            {7, 8, 9}
+                { 1, 2, 3 },
+                { 4, 5, 6 },
+                { 7, 8, 9 }
         };
-        
+
         System.out.println("Element at [0][0]: " + matrix[0][0]);
         System.out.println("Element at [1][2]: " + matrix[1][2]);
         System.out.println("Element at [2][1]: " + matrix[2][1]);
@@ -19,11 +20,11 @@ class Array2DBasic {
 class Array2DPrint {
     public static void main(String[] args) {
         int[][] matrix = {
-            {1, 2, 3},
-            {4, 5, 6},
-            {7, 8, 9}
+                { 1, 2, 3 },
+                { 4, 5, 6 },
+                { 7, 8, 9 }
         };
-        
+
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[i].length; j++) {
                 System.out.print(matrix[i][j] + " ");
@@ -37,18 +38,18 @@ class Array2DPrint {
 class Array2DSum {
     public static void main(String[] args) {
         int[][] matrix = {
-            {1, 2, 3},
-            {4, 5, 6},
-            {7, 8, 9}
+                { 1, 2, 3 },
+                { 4, 5, 6 },
+                { 7, 8, 9 }
         };
-        
+
         int sum = 0;
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[i].length; j++) {
                 sum += matrix[i][j];
             }
         }
-        
+
         System.out.println("Sum of all elements: " + sum);
     }
 }
@@ -57,11 +58,11 @@ class Array2DSum {
 class Array2DRowSum {
     public static void main(String[] args) {
         int[][] matrix = {
-            {1, 2, 3},
-            {4, 5, 6},
-            {7, 8, 9}
+                { 1, 2, 3 },
+                { 4, 5, 6 },
+                { 7, 8, 9 }
         };
-        
+
         for (int i = 0; i < matrix.length; i++) {
             int rowSum = 0;
             for (int j = 0; j < matrix[i].length; j++) {
@@ -76,11 +77,11 @@ class Array2DRowSum {
 class Array2DColumnSum {
     public static void main(String[] args) {
         int[][] matrix = {
-            {1, 2, 3},
-            {4, 5, 6},
-            {7, 8, 9}
+                { 1, 2, 3 },
+                { 4, 5, 6 },
+                { 7, 8, 9 }
         };
-        
+
         int columns = matrix[0].length;
         for (int j = 0; j < columns; j++) {
             int colSum = 0;
@@ -97,14 +98,14 @@ class Array2DInput {
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
         int[][] matrix = new int[2][3];
-        
+
         System.out.println("Enter 6 elements:");
         for (int i = 0; i < 2; i++) {
             for (int j = 0; j < 3; j++) {
                 matrix[i][j] = scn.nextInt();
             }
         }
-        
+
         System.out.println("You entered:");
         for (int i = 0; i < 2; i++) {
             for (int j = 0; j < 3; j++) {
@@ -119,11 +120,11 @@ class Array2DInput {
 class Array2DMax {
     public static void main(String[] args) {
         int[][] matrix = {
-            {10, 50, 30},
-            {40, 20, 60},
-            {15, 25, 35}
+                { 10, 50, 30 },
+                { 40, 20, 60 },
+                { 15, 25, 35 }
         };
-        
+
         int max = matrix[0][0];
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[i].length; j++) {
@@ -132,7 +133,7 @@ class Array2DMax {
                 }
             }
         }
-        
+
         System.out.println("Maximum element: " + max);
     }
 }
@@ -141,11 +142,11 @@ class Array2DMax {
 class Array2DDiagonal {
     public static void main(String[] args) {
         int[][] matrix = {
-            {1, 2, 3},
-            {4, 5, 6},
-            {7, 8, 9}
+                { 1, 2, 3 },
+                { 4, 5, 6 },
+                { 7, 8, 9 }
         };
-        
+
         System.out.println("Diagonal elements:");
         for (int i = 0; i < matrix.length; i++) {
             System.out.print(matrix[i][i] + " ");
@@ -157,20 +158,20 @@ class Array2DDiagonal {
 class Array2DTranspose {
     public static void main(String[] args) {
         int[][] matrix = {
-            {1, 2, 3},
-            {4, 5, 6}
+                { 1, 2, 3 },
+                { 4, 5, 6 }
         };
-        
+
         int rows = matrix.length;
         int cols = matrix[0].length;
         int[][] transpose = new int[cols][rows];
-        
+
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < cols; j++) {
                 transpose[j][i] = matrix[i][j];
             }
         }
-        
+
         System.out.println("Original matrix:");
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < cols; j++) {
@@ -178,7 +179,7 @@ class Array2DTranspose {
             }
             System.out.println();
         }
-        
+
         System.out.println("Transpose:");
         for (int i = 0; i < cols; i++) {
             for (int j = 0; j < rows; j++) {
@@ -194,7 +195,7 @@ class Array2DIdentity {
     public static void main(String[] args) {
         int n = 4;
         int[][] identity = new int[n][n];
-        
+
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
                 if (i == j) {
@@ -204,7 +205,7 @@ class Array2DIdentity {
                 }
             }
         }
-        
+
         System.out.println("Identity matrix:");
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
